@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from dininghall import views
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', views.homepage),
+    url(r'^hall/(?P<hall_slug>[\w-]+)/$', views.halldetail),
 ]

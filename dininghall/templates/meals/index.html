@@ -1,0 +1,6 @@
+<h1>GET YER GRUB ON</h1>
+
+<ul>{% for object in halls %}
+    <li><a href="{{ object.get_absolute_url }}">{{ object.name }}</a></li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,5 @@
+<h1>{{ dorm }}</h1>
+
+{% for object in meals %}
+<p>{{ object.hall }} served {{ object.total }} meals on {{ object.meal_date }}.</p>
+{% endfor %}
