@@ -1,5 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
 <h1>{{ dorm }}</h1>
 
-{% for object in meals %}
-<p>{{ object.hall }} served {{ object.total }} meals on {{ object.meal_date }}.</p>
-{% endfor %}
+<table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Total Meals Served</th>
+            </tr>
+          </thead>
+          <tbody>
+		{% for object in meals %}   
+             <tr>
+               <td>{{ object.meal_date }}</td>
+               <td>{{ object.total }}</td>
+             </tr>
+		{% endfor %}
+            </tbody>
+          </table>
+
+{% endblock %}
