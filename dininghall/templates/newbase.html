@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, maximum-scale=1">
-<title>UNL Dining</title>
+<title>Homepage</title>
+<link rel="icon" href="favicon.png" type="image/png">
 <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="/static/css/style.css" rel="stylesheet" type="text/css">
 <link href="/static/css/linecons.css" rel="stylesheet" type="text/css">
@@ -25,9 +26,9 @@
 <script type="text/javascript" src="/static/js/classie.js"></script>
 
 <!--[if lt IE 9]>
-    <script src="js/respond-1.1.0.min.js"></script>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/html5element.js"></script>
+    <script src="/static/js/respond-1.1.0.min.js"></script>
+    <script src="/static/js/html5shiv.js"></script>
+    <script src="/static/js/html5element.js"></script>
 <![endif]-->
 
 <script type="text/javascript">
@@ -61,10 +62,24 @@ function resizeText() {
 </script>
 </head>
 <body>
-    <div class="container">
-{% block content %}
-    </div>
-{% endblock %}
+
+<!--Header_section-->
+<header id="header_outer">
+  <div class="container">
+    <div class="header_section">
+      <div class="logo"><a href="javascript:void(0)"><img src="img/logob.png" alt=""></a></div>
+      <nav class="nav" id="nav">
+        <ul class="toggle">
+          <li><a href="#top_content">Home</a></li>
+      </nav>
+      <a class="res-nav_click animated wobble wow"  href="javascript:void(0)"><i class="fa-bars"></i></a> </div>
+  </div>
+</header>
+<!--Header_section--> 
+
+<section class="main-section" id="client_outer"><!--main-section client-part-start-->
+ {% block content %}{% endblock %}
+ </section>
 <script type="text/javascript">
     $(document).ready(function(e) {
         $('#header_outer').scrollToFixed();
@@ -239,8 +254,6 @@ $( window ).load(function() {
 	jQuery('#all').click();
 	return false;
 });
-    
-    
 </script>
 </body>
 </html>

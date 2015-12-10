@@ -4,10 +4,15 @@
 
 <h1>{{ dorm }}</h1>
 
+<p>This table illustrates which meal date and time had the most students present at the dining hall. This table shows the data for {{ dorm }} specifically.</p>
+
 <table class="table table-striped">
           <thead>
             <tr>
               <th>Date</th>
+                <th>Breakfast</th>
+                <th>Lunch</th>
+                <th>Dinner</th>
               <th>Total Meals Served</th>
             </tr>
           </thead>
@@ -15,6 +20,9 @@
 		{% for object in meals %}   
              <tr>
                <td>{{ object.meal_date }}</td>
+                 <td>{{ object.breakfast }}</td>
+                 <td>{{ object.lunch }}</td>
+                 <td>{{ object.dinner }}</td>
                <td>{{ object.total }}</td>
              </tr>
 		{% endfor %}
